@@ -20,4 +20,12 @@ properties:
         id: Yarn.Yarn
         source: winget
         version: 1.22.22
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Bun
+      directives:
+        description: Install Bun
+      settings:
+        id: Oven-sh.Bun
+        source: winget
+        version: 1.22.22
   configurationVersion: 0.2.0
