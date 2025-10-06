@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
+properties:
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Python 3.12
+      directives:
+        description: Install Python 3.12
+        allowPrerelease: true
+      settings:
+        id: Python.Python.3.12
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Ruff
+      directives:
+        description: Install Ruff
+      settings:
+        id: astral-sh.ruff
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: uv
+      directives:
+        description: Install uv
+      settings:
+        id: astral-sh.uv
+        source: winget
+  configurationVersion: 0.2.0

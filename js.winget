@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
+properties:
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: NodeJS
+      directives:
+        description: Install NodeJS
+        securityContext: elevated
+      settings:
+        id: OpenJS.NodeJS.LTS
+        source: winget
+        version: 20.19.5
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: Yarn
+      directives:
+        description: Install Yarn
+        securityContext: elevated
+      settings:
+        id: Yarn.Yarn
+        source: winget
+        version: 1.22.22
+  configurationVersion: 0.2.0
