@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+
+properties:
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: fd
+      directives:
+        description: Install fd
+      settings:
+        id: sharkdp.fd
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: RipGrep
+      directives:
+        description: Install RipGrep
+      settings:
+        id: BurntSushi.ripgrep.MSVC
+        source: winget
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: ugrep
+      directives:
+        description: Install ugrep
+      settings:
+        id: Genivia.ugrep
+        source: winget
+  configurationVersion: 0.2.0
